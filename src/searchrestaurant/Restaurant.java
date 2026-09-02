@@ -9,11 +9,12 @@ public class Restaurant {
 	private int distance;
 	private String place;
 	private String day;
-	private String time;
+	private String startTime;
+	private String endTime;
 	private double star;
 
 	public Restaurant(int id, String title, String genre, int minPrice, int maxPrice, int distance, String place,
-			String day, String time, double star) {
+			String day, String startTime, String endTime, double star) {
 
 		this.id = id;
 		this.title = title;
@@ -23,7 +24,8 @@ public class Restaurant {
 		this.distance = distance;
 		this.place = place;
 		this.day = day;
-		this.time = time;
+		this.startTime = startTime;
+		this.endTime = endTime;
 		this.star = star;
 	}
 
@@ -91,12 +93,20 @@ public class Restaurant {
 		this.day = day;
 	}
 
-	public String getTime() {
-		return time;
+	public String getStartTime() {
+		return startTime;
 	}
 
-	public void setTime(String time) {
-		this.time = time;
+	public void setStartTime(String startTime) {
+		this.startTime = startTime;
+	}
+
+	public String getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
 	}
 
 	public double getStar() {
@@ -107,4 +117,14 @@ public class Restaurant {
 		this.star = star;
 	}
 
+	public void showInfo() {
+		System.out.println("お店の名前: " + title);
+		System.out.println("お店のジャンル: " + genre);
+		System.out.println("価格: " + minPrice + "円〜" + maxPrice + "円");
+		System.out.println("駅からの距離: " + distance + "m");
+		System.out.println("場所: " + place);
+		System.out.println("営業日: " + day);
+		System.out.println("営業時間: " + startTime + "〜" + endTime);
+		System.out.println("星の評価: " + star);
+	}
 }
