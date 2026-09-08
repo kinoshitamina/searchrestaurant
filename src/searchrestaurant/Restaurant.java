@@ -6,13 +6,13 @@ public class Restaurant {
 	private String genre;
 	private int minPrice;
 	private int maxPrice;
-	private int distance;
+	private int walkMinutes;
 	private String place;
 	private String closeDay;
 	private String businessHour;
 	private double star;
 
-	public Restaurant(int id, String title, String genre, int minPrice, int maxPrice, int distance, String place,
+	public Restaurant(int id, String title, String genre, int minPrice, int maxPrice, int walkMinutes, String place,
 			String closeDay, String businessHour, double star) {
 
 		this.id = id;
@@ -20,7 +20,7 @@ public class Restaurant {
 		this.genre = genre;
 		this.minPrice = minPrice;
 		this.maxPrice = maxPrice;
-		this.distance = distance;
+		this.walkMinutes = walkMinutes;
 		this.place = place;
 		this.closeDay = closeDay;
 		this.businessHour = businessHour;
@@ -67,12 +67,12 @@ public class Restaurant {
 		this.maxPrice = maxPrice;
 	}
 
-	public int getDistance() {
-		return distance;
+	public int getWalkMinutes() {
+		return walkMinutes;
 	}
 
-	public void setDistance(int distance) {
-		this.distance = distance;
+	public void setWalkMinutes(int walkMinutes) {
+		this.walkMinutes = walkMinutes;
 	}
 
 	public String getPlace() {
@@ -111,7 +111,7 @@ public class Restaurant {
 		System.out.println("お店の名前: " + title);
 		System.out.println("お店のジャンル: " + genre);
 		System.out.println("価格: " + minPrice + "円〜" + maxPrice + "円");
-		System.out.println("駅からの距離: " + distance + "m");
+		System.out.println("駅から徒歩: " + walkMinutes + "分");
 		System.out.println("場所: " + place);
 		System.out.println("定休日: " + closeDay);
 		System.out.println("営業時間: " + businessHour);
