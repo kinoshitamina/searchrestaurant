@@ -23,7 +23,7 @@ public class RestaurantSearch {
 
 	public void searchByGenre(String genre) {
 		for (Restaurant restaurant : restaurants) {
-			if (genre.equals(restaurant.getGenre())) {
+			if (restaurant.getGenre().contains(genre)) {
 				restaurant.showInfo();
 			}
 		}
@@ -31,11 +31,10 @@ public class RestaurantSearch {
 
 	public void searchByTitle(String title) {
 		for (Restaurant restaurant : restaurants) {
-			if (title.equals(restaurant.getTitle())) {
+			if (restaurant.getTitle().contains(title)) {
 				restaurant.showInfo();
 			}
 		}
-
 	}
 
 	public void searchByMaxBudget(int maxBudget) {
