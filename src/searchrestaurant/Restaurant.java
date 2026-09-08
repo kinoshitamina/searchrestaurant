@@ -10,10 +10,10 @@ public class Restaurant {
 	private String place;
 	private String closeDay;
 	private String businessHour;
-	private double star;
+	private double rating;
 
 	public Restaurant(int id, String title, String genre, int minPrice, int maxPrice, int walkMinutes, String place,
-			String closeDay, String businessHour, double star) {
+			String closeDay, String businessHour, double rating) {
 
 		this.id = id;
 		this.title = title;
@@ -24,7 +24,7 @@ public class Restaurant {
 		this.place = place;
 		this.closeDay = closeDay;
 		this.businessHour = businessHour;
-		this.star = star;
+		this.rating = rating;
 	}
 
 	public int getId() {
@@ -99,12 +99,12 @@ public class Restaurant {
 		this.businessHour = businessHour;
 	}
 
-	public double getStar() {
-		return star;
+	public double getRating() {
+		return rating;
 	}
 
-	public void setStar(double star) {
-		this.star = star;
+	public void setRating(double rating) {
+		this.rating = rating;
 	}
 
 	public void showInfo() {
@@ -115,6 +115,6 @@ public class Restaurant {
 		System.out.println("場所: " + place);
 		System.out.println("定休日: " + closeDay);
 		System.out.println("営業時間: " + businessHour);
-		System.out.println("星の評価: " + star);
+		System.out.println("評価: " + rating);
 	}
 }
