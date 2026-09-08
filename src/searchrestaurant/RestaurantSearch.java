@@ -2,8 +2,6 @@ package searchrestaurant;
 
 import java.util.ArrayList;
 
-//import apple.laf.JRSUIState.TitleBarHeightState;
-
 public class RestaurantSearch {
 	private ArrayList<Restaurant> restaurants;
 
@@ -56,6 +54,18 @@ public class RestaurantSearch {
 	public void searchByRating(double rating) {
 		for (Restaurant restaurant : restaurants) {
 			if (restaurant.getRating() >= rating) {
+				restaurant.showInfo();
+			}
+		}
+	}
+
+	public void searchRestaurants(String title, String genre, int maxBudget, int walkMinutes, double rating) {
+		for (Restaurant restaurant : restaurants) {
+			if (restaurant.getTitle().contains(title)
+					&& restaurant.getGenre().contains(genre)
+					&& (maxBudget == 0 || restaurant.getMinPrice() <= maxBudget)
+					&& (walkMinutes == 0 || restaurant.getWalkMinutes() <= walkMinutes)
+					&& (rating == 0 || restaurant.getRating() >= rating)) {
 				restaurant.showInfo();
 			}
 		}
