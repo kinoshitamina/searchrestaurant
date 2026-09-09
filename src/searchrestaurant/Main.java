@@ -1,5 +1,7 @@
 package searchrestaurant;
 
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -9,5 +11,52 @@ public class Main {
 		RestaurantSearch restaurantSearch = new RestaurantSearch();
 		restaurantSearch.addRestaurant(restaurant);
 
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("\n店名を入力してください(指定なしはEnter)");
+		System.out.print("> ");
+		String title = scan.nextLine();
+
+		System.out.println("\nジャンルを入力してください(指定なしはEnter)");
+		System.out.print("> ");
+		String genre = scan.nextLine();
+
+		System.out.println("\n予算の上限を入力してください(指定なしはEnter)");
+		System.out.print("> ");
+		String budgetInput = scan.nextLine();
+
+		System.out.println("\n駅から徒歩何分ですか？(指定なしはEnter)");
+		System.out.print("> ");
+		String walkMinutesInput = scan.nextLine();
+
+		System.out.println("\n評価はいくつ以上ですか？(指定なしはEnter)");
+		System.out.print("> ");
+		String ratingInput = scan.nextLine();
+
+		int maxBudget;
+
+		if (budgetInput.isEmpty()) {
+			maxBudget = 0;
+		} else {
+			maxBudget = Integer.parseInt(budgetInput);
+		}
+
+		int walkMinutes;
+
+		if (walkMinutesInput.isEmpty()) {
+			walkMinutes = 0;
+		} else {
+			walkMinutes = Integer.parseInt(walkMinutesInput);
+		}
+
+		double rating;
+
+		if (ratingInput.isEmpty()) {
+			rating = 0;
+		} else {
+			rating = Double.parseDouble(ratingInput);
+		}
+
+		restaurantSearch.searchRestaurants(title, genre, maxBudget, walkMinutes, rating);
 	}
 }
