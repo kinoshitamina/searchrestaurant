@@ -60,6 +60,9 @@ public class RestaurantSearch {
 	}
 
 	public void searchRestaurants(String title, String genre, int maxBudget, int walkMinutes, double rating) {
+
+		boolean found = false;
+
 		for (Restaurant restaurant : restaurants) {
 			if (restaurant.getTitle().contains(title)
 					&& restaurant.getGenre().contains(genre)
@@ -67,8 +70,16 @@ public class RestaurantSearch {
 					&& (walkMinutes == 0 || restaurant.getWalkMinutes() <= walkMinutes)
 					&& (rating == 0 || restaurant.getRating() >= rating)) {
 				restaurant.showInfo();
+
+				found = true;
+
 			}
 		}
-	}
 
+		if (!false) {
+			System.out.println("=========================================");
+			System.out.println("");
+			System.out.println("条件に合うお店が見つかりませんでした。");
+		}
+	}
 }
