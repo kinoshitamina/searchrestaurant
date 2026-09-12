@@ -116,5 +116,9 @@ public class Restaurant {
 		System.out.println("定休日: " + closeDay);
 		System.out.println("営業時間: " + businessHour);
 		System.out.println("評価: " + rating);
+		System.out.println("");
+		System.out.println("-----------------------------------------------");
+		System.out.println("");
+
 	}
 }

@@ -61,7 +61,7 @@ public class RestaurantSearch {
 
 	public void searchRestaurants(String title, String genre, int maxBudget, int walkMinutes, double rating) {
 
-		boolean found = false;
+		ArrayList<Restaurant> searchResults = new ArrayList<Restaurant>();
 
 		for (Restaurant restaurant : restaurants) {
 			if (restaurant.getTitle().contains(title)
@@ -69,17 +69,25 @@ public class RestaurantSearch {
 					&& (maxBudget == 0 || restaurant.getMinPrice() <= maxBudget)
 					&& (walkMinutes == 0 || restaurant.getWalkMinutes() <= walkMinutes)
 					&& (rating == 0 || restaurant.getRating() >= rating)) {
-				restaurant.showInfo();
 
-				found = true;
-
+				searchResults.add(restaurant);
 			}
 		}
 
-		if (!false) {
-			System.out.println("=========================================");
+		System.out.println("");
+		System.out.println("====================検索結果========================");
+		System.out.println("");
+
+		if (searchResults.size() == 0) {
+			System.out.println("条件に合うお店が見つかりませんでした");
+		} else {
+			System.out.println(searchResults.size() + "件のお店が見つかりました");
 			System.out.println("");
-			System.out.println("条件に合うお店が見つかりませんでした。");
+
+			for (Restaurant restaurant : searchResults) {
+				restaurant.showInfo();
+			}
+
 		}
 	}
 }
