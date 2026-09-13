@@ -36,25 +36,36 @@ public class Main {
 
 			switch (menuInput) {
 			case "1":
-				System.out.println("検索します");
+				System.out.println("=========================");
+				System.out.println("       検索します");
+				System.out.println("=========================");
 				menu.searchMenu();
 				break;
 
 			case "2":
-				System.out.println("一覧を表示します");
+				System.out.println("=========================");
+				System.out.println("    一覧を表示します");
+				System.out.println("=========================");
 				restaurantSearch.showAllRestaurants();
 				break;
 
 			case "3":
-				System.out.println("お気に入りを表示します");
+				System.out.println("=========================");
+				System.out.println("   お気に入りを表示します");
+				System.out.println("=========================");
 				break;
 
 			case "4":
-				System.out.println("おすすめを表示します");
+				System.out.println("=========================");
+				System.out.println("     今日のおすすめ！");
+				System.out.println("=========================");
+				restaurantSearch.showRandomRestaurant();
 				break;
 
 			case "5":
-				System.out.println("処理を終了します");
+				System.out.println("=========================");
+				System.out.println("    処理を終了しました");
+				System.out.println("=========================");
 				running = false;
 				break;
 			}

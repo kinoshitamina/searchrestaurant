@@ -1,6 +1,7 @@
 package searchrestaurant;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class RestaurantSearch {
 	private ArrayList<Restaurant> restaurants;
@@ -89,5 +90,12 @@ public class RestaurantSearch {
 			}
 
 		}
+	}
+
+	public void showRandomRestaurant() {
+		Random random = new Random();
+		int randomIndex = random.nextInt(restaurants.size());
+		Restaurant restaurant = restaurants.get(randomIndex);
+		restaurant.showInfo();
 	}
 }
