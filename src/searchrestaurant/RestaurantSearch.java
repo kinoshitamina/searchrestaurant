@@ -98,4 +98,13 @@ public class RestaurantSearch {
 		Restaurant restaurant = restaurants.get(randomIndex);
 		restaurant.showInfo();
 	}
+
+	public Restaurant findById(int id) {
+		for (Restaurant restaurant : restaurants) {
+			if (restaurant.getId() == id) { //restaurantsを1店舗ずつ確認し、店舗のIDと引数のidが一致したらそのRestaurantを返す。最後まで見つからなければnullを返す。
+				return restaurant;
+			}
+		}
+		return null;
+	}
 }
