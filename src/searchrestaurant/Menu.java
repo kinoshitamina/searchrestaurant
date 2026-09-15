@@ -5,9 +5,11 @@ import java.util.Scanner;
 public class Menu {
 	Scanner scan = new Scanner(System.in);
 	private RestaurantSearch restaurantSearch;
+	private RestaurantFavorite restaurantFavorite;
 
-	public Menu(RestaurantSearch restaurantSearch) {
+	public Menu(RestaurantSearch restaurantSearch, RestaurantFavorite restaurantFavorite) {
 		this.restaurantSearch = restaurantSearch;
+		this.restaurantFavorite = restaurantFavorite;
 	}
 
 	public void showMenu() {

@@ -18,6 +18,7 @@ public class Main {
 				"東京都品川区東五反田1-12-5 秀栄ビル1", "なし", "平日：16:00 〜 23:00 / 0:00 頃、土日祝：12:00 〜 23:00 / 0:00 / 深夜1:00 頃", 3.0);
 
 		RestaurantSearch restaurantSearch = new RestaurantSearch();
+		RestaurantFavorite restaurantFavorite = new RestaurantFavorite();
 		restaurantSearch.addRestaurant(restaurant);
 		restaurantSearch.addRestaurant(restaurant2);
 		restaurantSearch.addRestaurant(restaurant3);
@@ -25,7 +26,7 @@ public class Main {
 		restaurantSearch.addRestaurant(restaurant5);
 
 		Scanner scan = new Scanner(System.in);
-		Menu menu = new Menu(restaurantSearch);
+		Menu menu = new Menu(restaurantSearch, restaurantFavorite);
 
 		boolean running = true;
 
