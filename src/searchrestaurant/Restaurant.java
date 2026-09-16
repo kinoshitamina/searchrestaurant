@@ -108,6 +108,7 @@ public class Restaurant {
 	}
 
 	public void showInfo() {
+		System.out.println("お店ID: " + id);
 		System.out.println("お店の名前: " + title);
 		System.out.println("お店のジャンル: " + genre);
 		System.out.println("価格: " + minPrice + "円〜" + maxPrice + "円");
