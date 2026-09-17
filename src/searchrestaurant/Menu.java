@@ -101,4 +101,20 @@ public class Menu {
 		System.out.println("番号を入力してください >");
 
 	}
+
+	public void removeFavoriteMenu() {
+		String idInput = scan.nextLine();
+		int restaurantId = Integer.parseInt(idInput);
+		Restaurant foundRestaurant = restaurantSearch.findById(restaurantId);
+		if (foundRestaurant != null) { //お店自体が存在するか
+			if (restaurantFavorite.isFavorite(foundRestaurant)) { //そのお店がお気に入りに入っているか
+				System.out.println("お気に入りを削除しました");
+				restaurantFavorite.removeFavorite(foundRestaurant);
+			} else {
+				System.out.println("お気に入りに登録されていません");
+			}
+		} else {
+			System.out.println("そのIDのお店は見つかりませんでした");
+		}
+	}
 }

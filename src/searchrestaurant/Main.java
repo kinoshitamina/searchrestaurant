@@ -75,8 +75,17 @@ public class Main {
 						System.out.println("========お気に入り追加========");
 						System.out.println();
 						System.out.println("お気に入りに追加したいお店のIDを入力してください");
-						System.out.println(" >");
+						System.out.println("> ");
 						menu.addFavoriteMenu();
+						break;
+
+					case "3":
+						System.out.println();
+						System.out.println("========お気に入り削除=========");
+						System.out.println();
+						System.out.println("お気に入りを削除したいお店のIDを入力してください");
+						System.out.println("> ");
+						menu.removeFavoriteMenu();
 						break;
 
 					case "4":

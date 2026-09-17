@@ -15,9 +15,21 @@ public class RestaurantFavorite {
 	}
 
 	public void showFavorites() {
-		for (Restaurant restaurant : favoriteRestaurants) {
-			restaurant.showInfo();
+		if (favoriteRestaurants.isEmpty()) {
+			System.out.println("お気に入りはありません");
+		} else {
+			for (Restaurant restaurant : favoriteRestaurants) {
+				restaurant.showInfo();
+			}
 		}
+	}
+
+	public void removeFavorite(Restaurant favoriteRestaurant) {
+		favoriteRestaurants.remove(favoriteRestaurant);
+	}
+
+	public boolean isFavorite(Restaurant favoriteRestaurant) {
+		return favoriteRestaurants.contains(favoriteRestaurant);
 	}
 
 }
