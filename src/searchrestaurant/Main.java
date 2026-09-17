@@ -19,6 +19,7 @@ public class Main {
 
 		RestaurantSearch restaurantSearch = new RestaurantSearch();
 		RestaurantFavorite restaurantFavorite = new RestaurantFavorite();
+
 		restaurantSearch.addRestaurant(restaurant);
 		restaurantSearch.addRestaurant(restaurant2);
 		restaurantSearch.addRestaurant(restaurant3);
@@ -52,8 +53,33 @@ public class Main {
 
 			case "3":
 				System.out.println("=========================");
-				System.out.println("   お気に入りを表示します");
+				System.out.println("   　お気に入りメニュー");
 				System.out.println("=========================");
+
+				boolean favoriteRunning = true;
+				while (favoriteRunning) {
+					menu.favoriteMenu();
+
+					String favoriteChoice = scan.nextLine();
+
+					switch (favoriteChoice) {
+					case "1":
+						System.out.println("========お気に入り一覧=======");
+						restaurantFavorite.showFavorites();
+						break;
+
+					case "2":
+						System.out.println("========お気に入り追加========");
+						menu.addFavoriteMenu();
+						break;
+
+					case "4":
+						favoriteRunning = false;
+						break;
+					}
+
+				}
+
 				break;
 
 			case "4":
@@ -71,5 +97,7 @@ public class Main {
 				break;
 			}
 		}
+
 	}
+
 }

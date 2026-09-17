@@ -75,4 +75,27 @@ public class Menu {
 		restaurantSearch.searchRestaurants(title, genre, maxBudget, walkMinutes, rating);
 
 	}
+
+	public void addFavoriteMenu() {
+		String idInput = scan.nextLine();
+		int restaurantId = Integer.parseInt(idInput);
+		Restaurant foundRestaurant = restaurantSearch.findById(restaurantId);
+		if (foundRestaurant != null) {
+			System.out.println("お気に入りに追加しました");
+			restaurantFavorite.addFavorite(foundRestaurant);
+		} else {
+			System.out.println("そのIDのお店は見つかりませんでした");
+		}
+	}
+
+	public void favoriteMenu() {
+		System.out.println("");
+		System.out.println("1: お気に入りを見る");
+		System.out.println("2: お気に入りを追加");
+		System.out.println("3: お気に入りを削除");
+		System.out.println("4: メニュー画面に戻る");
+		System.out.println("");
+		System.out.println("番号を入力してください >");
+
+	}
 }
