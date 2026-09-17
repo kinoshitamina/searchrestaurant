@@ -38,23 +38,23 @@ public class Main {
 
 			switch (menuInput) {
 			case "1":
+				System.out.println();
 				System.out.println("=========================");
-				System.out.println("       検索します");
+				System.out.println("         お店検索");
 				System.out.println("=========================");
 				menu.searchMenu();
 				break;
 
 			case "2":
+				System.out.println();
 				System.out.println("=========================");
-				System.out.println("    一覧を表示します");
+				System.out.println("       一覧を表示");
 				System.out.println("=========================");
+				System.out.println();
 				restaurantSearch.showAllRestaurants();
 				break;
 
 			case "3":
-				System.out.println("=========================");
-				System.out.println("   　お気に入りメニュー");
-				System.out.println("=========================");
 
 				boolean favoriteRunning = true;
 				while (favoriteRunning) {
@@ -64,12 +64,18 @@ public class Main {
 
 					switch (favoriteChoice) {
 					case "1":
+						System.out.println();
 						System.out.println("========お気に入り一覧=======");
+						System.out.println();
 						restaurantFavorite.showFavorites();
 						break;
 
 					case "2":
+						System.out.println();
 						System.out.println("========お気に入り追加========");
+						System.out.println();
+						System.out.println("お気に入りに追加したいお店のIDを入力してください");
+						System.out.println(" >");
 						menu.addFavoriteMenu();
 						break;
 
@@ -83,16 +89,20 @@ public class Main {
 				break;
 
 			case "4":
+				System.out.println();
 				System.out.println("=========================");
 				System.out.println("     今日のおすすめ！");
 				System.out.println("=========================");
+				System.out.println();
 				restaurantSearch.showRandomRestaurant();
 				break;
 
 			case "5":
+				System.out.println();
 				System.out.println("=========================");
-				System.out.println("    処理を終了しました");
+				System.out.println("    処理が終了しました");
 				System.out.println("=========================");
+				System.out.println();
 				running = false;
 				break;
 			}

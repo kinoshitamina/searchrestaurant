@@ -13,17 +13,17 @@ public class Menu {
 	}
 
 	public void showMenu() {
-		System.out.println("");
+		System.out.println();
 		System.out.println("=====================================");
-		System.out.println("        　五反田レストラン検索");
+		System.out.println("        　 五反田レストラン");
 		System.out.println("=====================================");
-		System.out.println("");
+		System.out.println();
 		System.out.println("1. お店を検索する");
 		System.out.println("2. お店一覧を見る");
 		System.out.println("3. お気に入りを見る");
 		System.out.println("4. おすすめ！");
 		System.out.println("5. 終了する");
-		System.out.println("");
+		System.out.println();
 		System.out.println("番号を入力してください > ");
 	}
 
@@ -89,12 +89,15 @@ public class Menu {
 	}
 
 	public void favoriteMenu() {
-		System.out.println("");
-		System.out.println("1: お気に入りを見る");
-		System.out.println("2: お気に入りを追加");
-		System.out.println("3: お気に入りを削除");
-		System.out.println("4: メニュー画面に戻る");
-		System.out.println("");
+		System.out.println("=========================");
+		System.out.println("   　お気に入りメニュー");
+		System.out.println("=========================");
+		System.out.println();
+		System.out.println("1. お気に入りを見る");
+		System.out.println("2. お気に入りを追加");
+		System.out.println("3. お気に入りを削除");
+		System.out.println("4. メニュー画面に戻る");
+		System.out.println();
 		System.out.println("番号を入力してください >");
 
 	}
