@@ -44,10 +44,6 @@ public class Menu {
 		System.out.print("> ");
 		String walkMinutesInput = scan.nextLine();
 
-		System.out.println("\n評価はいくつ以上ですか？(指定なしはEnter)");
-		System.out.print("> ");
-		String ratingInput = scan.nextLine();
-
 		int maxBudget;
 
 		if (budgetInput.isEmpty()) {
@@ -64,15 +60,7 @@ public class Menu {
 			walkMinutes = Integer.parseInt(walkMinutesInput);
 		}
 
-		double rating;
-
-		if (ratingInput.isEmpty()) {
-			rating = 0;
-		} else {
-			rating = Double.parseDouble(ratingInput);
-		}
-
-		restaurantSearch.searchRestaurants(title, genre, maxBudget, walkMinutes, rating);
+		restaurantSearch.searchRestaurants(title, genre, maxBudget, walkMinutes);
 
 	}
 

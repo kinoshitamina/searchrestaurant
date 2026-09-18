@@ -52,15 +52,7 @@ public class RestaurantSearch {
 		}
 	}
 
-	public void searchByRating(double rating) {
-		for (Restaurant restaurant : restaurants) {
-			if (restaurant.getRating() >= rating) {
-				restaurant.showInfo();
-			}
-		}
-	}
-
-	public void searchRestaurants(String title, String genre, int maxBudget, int walkMinutes, double rating) {
+	public void searchRestaurants(String title, String genre, int maxBudget, int walkMinutes) {
 
 		ArrayList<Restaurant> searchResults = new ArrayList<Restaurant>();
 
@@ -68,8 +60,7 @@ public class RestaurantSearch {
 			if (restaurant.getTitle().contains(title)
 					&& restaurant.getGenre().contains(genre)
 					&& (maxBudget == 0 || restaurant.getMinPrice() <= maxBudget)
-					&& (walkMinutes == 0 || restaurant.getWalkMinutes() <= walkMinutes)
-					&& (rating == 0 || restaurant.getRating() >= rating)) {
+					&& (walkMinutes == 0 || restaurant.getWalkMinutes() <= walkMinutes)) {
 
 				searchResults.add(restaurant);
 			}
