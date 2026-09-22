@@ -40,40 +40,48 @@ public class Menu {
 		System.out.print("> ");
 		String budgetInput = scan.nextLine();
 
+		int maxBudget;
+		while (true) {
+			try {
+				if (budgetInput.isEmpty()) {
+					maxBudget = 0;
+				} else {
+					maxBudget = Integer.parseInt(budgetInput);
+				}
+				break;
+			} catch (NumberFormatException e) {
+				System.out.println();
+				System.out.println("*予算を数字で入力してください");
+				System.out.println("\n予算の上限を入力してください(指定なしはEnter)");
+				System.out.print("> ");
+				budgetInput = scan.nextLine();
+			}
+		}
+
 		System.out.println("\n駅から徒歩何分ですか？(指定なしはEnter)");
 		System.out.print("> ");
 		String walkMinutesInput = scan.nextLine();
 
-		int maxBudget;
-
-		if (budgetInput.isEmpty()) {
-			maxBudget = 0;
-		} else {
-			maxBudget = Integer.parseInt(budgetInput);
-		}
-
 		int walkMinutes;
-
-		if (walkMinutesInput.isEmpty()) {
-			walkMinutes = 0;
-		} else {
-			walkMinutes = Integer.parseInt(walkMinutesInput);
+		while (true) {
+			try {
+				if (walkMinutesInput.isEmpty()) {
+					walkMinutes = 0;
+				} else {
+					walkMinutes = Integer.parseInt(walkMinutesInput);
+				}
+				break;
+			} catch (NumberFormatException e) {
+				System.out.println();
+				System.out.println("*徒歩分数を数字で入力してください");
+				System.out.println("\n駅から徒歩何分ですか？(指定なしはEnter)");
+				System.out.print("> ");
+				walkMinutesInput = scan.nextLine();
+			}
 		}
 
 		restaurantSearch.searchRestaurants(title, genre, maxBudget, walkMinutes);
 
-	}
-
-	public void addFavoriteMenu() {
-		String idInput = scan.nextLine();
-		int restaurantId = Integer.parseInt(idInput);
-		Restaurant foundRestaurant = restaurantSearch.findById(restaurantId);
-		if (foundRestaurant != null) {
-			System.out.println("お気に入りに追加しました");
-			restaurantFavorite.addFavorite(foundRestaurant);
-		} else {
-			System.out.println("そのIDのお店は見つかりませんでした");
-		}
 	}
 
 	public void favoriteMenu() {
@@ -90,19 +98,56 @@ public class Menu {
 
 	}
 
+	public void addFavoriteMenu() {
+		String idInput = scan.nextLine();
+		while (true) {
+			try {
+				int restaurantId = Integer.parseInt(idInput);
+				Restaurant foundRestaurant = restaurantSearch.findById(restaurantId);
+				if (foundRestaurant != null) {
+					System.out.println("お気に入りに追加しました");
+					restaurantFavorite.addFavorite(foundRestaurant);
+				} else {
+					System.out.println("そのIDのお店は見つかりませんでした");
+				}
+				break;
+			} catch (NumberFormatException e) {
+				System.out.println();
+				System.out.println("*お店のIDを数字で入力してください");
+				System.out.println();
+				System.out.println("お気に入りに追加したいお店のIDを入力してください");
+				System.out.println("> ");
+				idInput = scan.nextLine();
+			}
+		}
+	}
+
 	public void removeFavoriteMenu() {
 		String idInput = scan.nextLine();
-		int restaurantId = Integer.parseInt(idInput);
-		Restaurant foundRestaurant = restaurantSearch.findById(restaurantId);
-		if (foundRestaurant != null) { //お店自体が存在するか
-			if (restaurantFavorite.isFavorite(foundRestaurant)) { //そのお店がお気に入りに入っているか
-				System.out.println("お気に入りを削除しました");
-				restaurantFavorite.removeFavorite(foundRestaurant);
-			} else {
-				System.out.println("お気に入りに登録されていません");
+		while (true) {
+			try {
+				int restaurantId = Integer.parseInt(idInput);
+				Restaurant foundRestaurant = restaurantSearch.findById(restaurantId);
+
+				if (foundRestaurant != null) { //お店自体が存在するか
+					if (restaurantFavorite.isFavorite(foundRestaurant)) { //そのお店がお気に入りに入っているか
+						System.out.println("お気に入りを削除しました");
+						restaurantFavorite.removeFavorite(foundRestaurant);
+					} else {
+						System.out.println("お気に入りに登録されていません");
+					}
+				} else {
+					System.out.println("そのIDのお店は見つかりませんでした");
+				}
+				break;
+			} catch (NumberFormatException e) {
+				System.out.println();
+				System.out.println("お店のIDを数字で入力してください");
+				System.out.println();
+				System.out.println("お気に入りを削除したいお店のIDを入力してください");
+				System.out.println("> ");
+				idInput = scan.nextLine();
 			}
-		} else {
-			System.out.println("そのIDのお店は見つかりませんでした");
 		}
 	}
 }
