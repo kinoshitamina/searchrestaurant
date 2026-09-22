@@ -94,7 +94,7 @@ public class Menu {
 		System.out.println("3. お気に入りを削除");
 		System.out.println("4. メニュー画面に戻る");
 		System.out.println();
-		System.out.println("番号を入力してください >");
+		System.out.println("番号を入力してください > ");
 
 	}
 
@@ -149,5 +149,31 @@ public class Menu {
 				idInput = scan.nextLine();
 			}
 		}
+	}
+
+	public void recommendMenu() {
+		System.out.println("=========================");
+		System.out.println("   　 おすすめメニュー");
+		System.out.println("=========================");
+		System.out.println();
+		System.out.println("1. 今日の気分から決める");
+		System.out.println("2. 完全おまかせ");
+		System.out.println("3. メニュー画面に戻る");
+		System.out.println();
+		System.out.println("番号を入力してください > ");
+	}
+
+	public void feelingMenu() {
+		System.out.println("==========================");
+		System.out.println("  今日はどんな気分ですか？");
+		System.out.println("==========================");
+		System.out.println();
+		System.out.println("1. がっつり食べたい");
+		System.out.println("2. あっさり食べたい");
+		System.out.println("3. 飲みながら食べたい");
+		System.out.println("4. ちょっと贅沢したい");
+		System.out.println("5. 軽く済ませたい");
+		System.out.println();
+		System.out.println("番号を入力してください > ");
 	}
 }

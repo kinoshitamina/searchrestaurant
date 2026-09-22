@@ -10,12 +10,14 @@ public class RestaurantRecommend {
 		this.restaurantSearch = restaurantSearch;
 	}
 
-	public void recommendByFeeling() {
+	public void recommendByFeeling(int feelingChoice) {
 		ArrayList<Restaurant> recommendOptions = new ArrayList<Restaurant>();
 		for (Restaurant restaurant : restaurantSearch.getRestaurants()) {
+
 			if (restaurant.getMinPrice() >= 5000) {
 				recommendOptions.add(restaurant);
 			}
+
 		}
 		if (recommendOptions.isEmpty()) {
 			System.out.println("候補がありません");

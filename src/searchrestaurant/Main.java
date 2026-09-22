@@ -9,6 +9,7 @@ public class Main {
 		RestaurantSearch restaurantSearch = new RestaurantSearch();
 		RestaurantFavorite restaurantFavorite = new RestaurantFavorite();
 		RestaurantData restaurantData = new RestaurantData();
+		RestaurantRecommend restaurantRecommend = new RestaurantRecommend(restaurantSearch);
 
 		restaurantData.addRestaurantData(restaurantSearch);
 
@@ -84,13 +85,24 @@ public class Main {
 				break;
 
 			case "4":
-				System.out.println();
-				System.out.println("=========================");
-				System.out.println("     今日のおすすめ！");
-				System.out.println("=========================");
-				System.out.println();
-				restaurantSearch.showRandomRestaurant();
-				break;
+
+				boolean recommendRunning = true;
+				while (recommendRunning) {
+					menu.recommendMenu();
+
+					String recommendChoice = scan.nextLine();
+					switch (recommendChoice) {
+					case "1":
+						System.out.println();
+						System.out.println("お店選びお手伝いします");
+						System.out.println();
+						menu.feelingMenu();
+						String feelingChoice = scan.nextLine();
+						int feelingNumber = Integer.parseInt(feelingChoice);
+						restaurantRecommend.recommendByFeeling(feelingNumber);
+						break;
+					}
+				}
 
 			case "5":
 				System.out.println();
