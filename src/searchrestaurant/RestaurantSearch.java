@@ -98,4 +98,8 @@ public class RestaurantSearch {
 		}
 		return null;
 	}
+
+	public ArrayList<Restaurant> getRestaurants() {
+		return restaurants;
+	}
 }
