@@ -14,7 +14,7 @@ public class Main {
 		restaurantData.addRestaurantData(restaurantSearch);
 
 		Scanner scan = new Scanner(System.in);
-		Menu menu = new Menu(restaurantSearch, restaurantFavorite);
+		Menu menu = new Menu(restaurantSearch, restaurantFavorite, scan);
 
 		boolean running = true;
 

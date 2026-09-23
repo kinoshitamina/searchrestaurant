@@ -3,13 +3,14 @@ package searchrestaurant;
 import java.util.Scanner;
 
 public class Menu {
-	Scanner scan = new Scanner(System.in);
 	private RestaurantSearch restaurantSearch;
 	private RestaurantFavorite restaurantFavorite;
+	private Scanner scan;
 
-	public Menu(RestaurantSearch restaurantSearch, RestaurantFavorite restaurantFavorite) {
+	public Menu(RestaurantSearch restaurantSearch, RestaurantFavorite restaurantFavorite, Scanner scan) {
 		this.restaurantSearch = restaurantSearch;
 		this.restaurantFavorite = restaurantFavorite;
+		this.scan = scan;
 	}
 
 	public void showMenu() {
