@@ -26,6 +26,8 @@ public class RestaurantRecommend {
 				if (restaurant.getGenre().contains("寿司")
 						|| restaurant.getGenre().contains("海鮮")
 						|| restaurant.getGenre().contains("和食")
+						|| restaurant.getGenre().contains("うどん")
+						|| restaurant.getGenre().contains("そば")
 						|| restaurant.getGenre().contains("野菜")) {
 					recommendOptions.add(restaurant);
 				}
