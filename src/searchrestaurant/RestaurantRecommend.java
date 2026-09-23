@@ -10,11 +10,11 @@ public class RestaurantRecommend {
 		this.restaurantSearch = restaurantSearch;
 	}
 
-	public void recommendByFeeling(int feelingChoice) {
+	public void recommendByFeeling(String feelingChoice) {
 		ArrayList<Restaurant> recommendOptions = new ArrayList<Restaurant>();
 		for (Restaurant restaurant : restaurantSearch.getRestaurants()) {
 			switch (feelingChoice) {
-			case 1:
+			case "1":
 				if (restaurant.getGenre().contains("肉")
 						|| restaurant.getGenre().contains("中華")
 						|| restaurant.getGenre().contains("ラーメン")
@@ -22,7 +22,7 @@ public class RestaurantRecommend {
 					recommendOptions.add(restaurant);
 				}
 				break;
-			case 2:
+			case "2":
 				if (restaurant.getGenre().contains("寿司")
 						|| restaurant.getGenre().contains("海鮮")
 						|| restaurant.getGenre().contains("和食")
@@ -30,20 +30,20 @@ public class RestaurantRecommend {
 					recommendOptions.add(restaurant);
 				}
 				break;
-			case 3:
+			case "3":
 				if (restaurant.getGenre().contains("居酒屋")
 						|| restaurant.getGenre().contains("酒")
 						|| restaurant.getGenre().contains("串")
 						|| restaurant.getGenre().contains("焼き鳥")) {
 					recommendOptions.add(restaurant);
-					break;
 				}
-			case 4:
+				break;
+			case "4":
 				if (restaurant.getMinPrice() >= 5000) {
 					recommendOptions.add(restaurant);
 				}
 				break;
-			case 5:
+			case "5":
 				if (restaurant.getMaxPrice() <= 2000 && restaurant.getGenre().contains("ファストフード")) {
 					recommendOptions.add(restaurant);
 				}
@@ -56,6 +56,33 @@ public class RestaurantRecommend {
 			Random random = new Random();
 			int randomIndex = random.nextInt(recommendOptions.size());
 			Restaurant restaurant = recommendOptions.get(randomIndex);
+			switch (feelingChoice) {
+			case "1":
+				System.out.println();
+				System.out.println("=======がっつり系のお店=======");
+				System.out.println();
+				break;
+			case "2":
+				System.out.println();
+				System.out.println("=======あっさり系のお店=======");
+				System.out.println();
+				break;
+			case "3":
+				System.out.println();
+				System.out.println("=======お酒と楽しめるお店========");
+				System.out.println();
+				break;
+			case "4":
+				System.out.println();
+				System.out.println("=======ちょっと贅沢なお店========");
+				System.out.println();
+				break;
+			case "5":
+				System.out.println();
+				System.out.println("======軽く済ませられるお店=======");
+				System.out.println();
+				break;
+			}
 			restaurant.showInfo();
 		}
 	}

@@ -79,9 +79,7 @@ public class Main {
 						favoriteRunning = false;
 						break;
 					}
-
 				}
-
 				break;
 
 			case "4":
@@ -94,16 +92,24 @@ public class Main {
 					switch (recommendChoice) {
 					case "1":
 						System.out.println();
-						System.out.println("お店選びお手伝いします");
+						System.out.println("お店選びをお手伝いします");
 						System.out.println();
 						menu.feelingMenu();
 						String feelingChoice = scan.nextLine();
-						int feelingNumber = Integer.parseInt(feelingChoice);
-						restaurantRecommend.recommendByFeeling(feelingNumber);
+						restaurantRecommend.recommendByFeeling(feelingChoice);
+						break;
+					case "2":
+						System.out.println();
+						System.out.println("=====完全おまかせ=====");
+						System.out.println();
+						restaurantSearch.showRandomRestaurant();
+						break;
+					case "3":
+						recommendRunning = false;
 						break;
 					}
 				}
-
+				break;
 			case "5":
 				System.out.println();
 				System.out.println("=========================");
