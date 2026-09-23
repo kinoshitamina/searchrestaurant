@@ -20,38 +20,6 @@ public class RestaurantSearch {
 		}
 	}
 
-	public void searchByGenre(String genre) {
-		for (Restaurant restaurant : restaurants) {
-			if (restaurant.getGenre().contains(genre)) {
-				restaurant.showInfo();
-			}
-		}
-	}
-
-	public void searchByTitle(String title) {
-		for (Restaurant restaurant : restaurants) {
-			if (restaurant.getTitle().contains(title)) {
-				restaurant.showInfo();
-			}
-		}
-	}
-
-	public void searchByMaxBudget(int maxBudget) {
-		for (Restaurant restaurant : restaurants) {
-			if (restaurant.getMinPrice() <= maxBudget) {
-				restaurant.showInfo();
-			}
-		}
-	}
-
-	public void searchByWalkMinutes(int walkMinutes) {
-		for (Restaurant restaurant : restaurants) {
-			if (restaurant.getWalkMinutes() <= walkMinutes) {
-				restaurant.showInfo();
-			}
-		}
-	}
-
 	public void searchRestaurants(String title, String genre, int maxBudget, int walkMinutes) {
 
 		ArrayList<Restaurant> searchResults = new ArrayList<Restaurant>();

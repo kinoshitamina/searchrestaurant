@@ -29,73 +29,73 @@ public class Restaurant {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
+	//	public void setId(int id) {
+	//		this.id = id;
+	//	}
 
 	public String getTitle() {
 		return title;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+	//	public void setTitle(String title) {
+	//		this.title = title;
+	//	}
 
 	public String getGenre() {
 		return genre;
 	}
 
-	public void setGenre(String genre) {
-		this.genre = genre;
-	}
+	//	public void setGenre(String genre) {
+	//		this.genre = genre;
+	//	}
 
 	public int getMinPrice() {
 		return minPrice;
 	}
-
-	public void setMinPrice(int minPrice) {
-		this.minPrice = minPrice;
-	}
+	//
+	//	public void setMinPrice(int minPrice) {
+	//		this.minPrice = minPrice;
+	//	}
 
 	public int getMaxPrice() {
 		return maxPrice;
 	}
 
-	public void setMaxPrice(int maxPrice) {
-		this.maxPrice = maxPrice;
-	}
+	//	public void setMaxPrice(int maxPrice) {
+	//		this.maxPrice = maxPrice;
+	//	}
 
 	public int getWalkMinutes() {
 		return walkMinutes;
 	}
 
-	public void setWalkMinutes(int walkMinutes) {
-		this.walkMinutes = walkMinutes;
-	}
+	//	public void setWalkMinutes(int walkMinutes) {
+	//		this.walkMinutes = walkMinutes;
+	//	}
 
 	public String getPlace() {
 		return place;
 	}
-
-	public void setPlace(String place) {
-		this.place = place;
-	}
+	//
+	//	public void setPlace(String place) {
+	//		this.place = place;
+	//	}
 
 	public String getCloseDay() {
 		return closeDay;
 	}
-
-	public void setCloseDay(String closeDay) {
-		this.closeDay = closeDay;
-	}
+	//
+	//	public void setCloseDay(String closeDay) {
+	//		this.closeDay = closeDay;
+	//	}
 
 	public String getBusinessHour() {
 		return businessHour;
 	}
 
-	public void setBusinessHour(String businessHour) {
-		this.businessHour = businessHour;
-	}
+	//	public void setBusinessHour(String businessHour) {
+	//		this.businessHour = businessHour;
+	//	}
 
 	public void showInfo() {
 		System.out.println("お店ID: " + id);
