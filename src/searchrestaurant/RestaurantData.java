@@ -98,7 +98,7 @@ public class RestaurantData {
 			"なし", "7:00～翌5:00");
 	Restaurant restaurant29 = new Restaurant(29, "サイゼリア", "イタリアン", 1000, 2000, 4, "東京都品川区西五反田１丁目１１−１ Aios 五反田駅前 2F",
 			"なし", "11:00～翌5:00");
-	Restaurant restaurant30 = new Restaurant(30, "マクドナルド", "ハンバーガー・ファーストフード", 1, 1000, 1,
+	Restaurant restaurant30 = new Restaurant(30, "マクドナルド", "ハンバーガー・ファストフード", 1, 1000, 1,
 			"東京都品川区東五反田１丁目２６−１４ アトレ五反田1 2F・3F",
 			"なし", "24時間営業");
 
