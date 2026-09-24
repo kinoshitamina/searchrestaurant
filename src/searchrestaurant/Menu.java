@@ -48,6 +48,14 @@ public class Menu {
 					maxBudget = 0;
 				} else {
 					maxBudget = Integer.parseInt(budgetInput);
+					if (maxBudget < 0) {
+						System.out.println();
+						System.out.println("0以上の数字を入力してください");
+						System.out.println("\n予算の上限を入力してください(指定なしはEnter)");
+						System.out.print("> ");
+						budgetInput = scan.nextLine();
+						continue;
+					}
 				}
 				break;
 			} catch (NumberFormatException e) {
@@ -59,7 +67,7 @@ public class Menu {
 			}
 		}
 
-		System.out.println("\n駅から徒歩何分ですか？(指定なしはEnter)");
+		System.out.println("\n駅から徒歩何分が希望ですか？(指定なしはEnter)");
 		System.out.print("> ");
 		String walkMinutesInput = scan.nextLine();
 
@@ -70,6 +78,14 @@ public class Menu {
 					walkMinutes = 0;
 				} else {
 					walkMinutes = Integer.parseInt(walkMinutesInput);
+					if (walkMinutes < 0) {
+						System.out.println();
+						System.out.println("0以上の数字を入力してください");
+						System.out.println("\n駅から徒歩何分が希望ですか？(指定なしはEnter)");
+						System.out.print("> ");
+						walkMinutesInput = scan.nextLine();
+						continue;
+					}
 				}
 				break;
 			} catch (NumberFormatException e) {
