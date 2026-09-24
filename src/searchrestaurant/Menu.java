@@ -121,13 +121,19 @@ public class Menu {
 			try {
 				int restaurantId = Integer.parseInt(idInput);
 				Restaurant foundRestaurant = restaurantSearch.findById(restaurantId);
+
 				if (foundRestaurant != null) {
-					System.out.println("お気に入りに追加しました");
-					restaurantFavorite.addFavorite(foundRestaurant);
+					if (restaurantFavorite.isFavorite(foundRestaurant)) {
+						System.out.println("そのお店はすでに登録されています");
+					} else {
+						System.out.println("お気に入りに追加しました");
+						restaurantFavorite.addFavorite(foundRestaurant);
+					}
 				} else {
 					System.out.println("そのIDのお店は見つかりませんでした");
 				}
 				break;
+
 			} catch (NumberFormatException e) {
 				System.out.println();
 				System.out.println("*お店のIDを数字で入力してください");
