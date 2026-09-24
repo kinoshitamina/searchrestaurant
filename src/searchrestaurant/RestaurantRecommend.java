@@ -11,6 +11,14 @@ public class RestaurantRecommend {
 	}
 
 	public void recommendByFeeling(String feelingChoice) {
+		if (!feelingChoice.equals("1")
+				&& !feelingChoice.equals("2")
+				&& !feelingChoice.equals("3")
+				&& !feelingChoice.equals("4")
+				&& !feelingChoice.equals("5")) {
+			System.out.println("1~5の数字を入力してください");
+			return;
+		}
 		ArrayList<Restaurant> recommendOptions = new ArrayList<Restaurant>();
 		for (Restaurant restaurant : restaurantSearch.getRestaurants()) {
 			switch (feelingChoice) {

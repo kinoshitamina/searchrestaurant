@@ -78,6 +78,10 @@ public class Main {
 					case "4":
 						favoriteRunning = false;
 						break;
+					default:
+						System.out.println();
+						System.out.println("1~4の数字を入力してください。");
+						System.out.println();
 					}
 				}
 				break;
@@ -107,6 +111,10 @@ public class Main {
 					case "3":
 						recommendRunning = false;
 						break;
+					default:
+						System.out.println();
+						System.out.println("1~3の数字を入力してください。");
+						System.out.println();
 					}
 				}
 				break;
@@ -117,6 +125,12 @@ public class Main {
 				System.out.println("=========================");
 				System.out.println();
 				running = false;
+				break;
+
+			default:
+				System.out.println();
+				System.out.println("1~5の数字を入力してください。");
+				System.out.println();
 				break;
 			}
 		}
