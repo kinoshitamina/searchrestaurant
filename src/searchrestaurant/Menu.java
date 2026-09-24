@@ -25,7 +25,7 @@ public class Menu {
 		System.out.println("4. おすすめ！");
 		System.out.println("5. 終了する");
 		System.out.println();
-		System.out.println("番号を入力してください > ");
+		System.out.print("番号を入力してください > ");
 	}
 
 	public void searchMenu() {
@@ -91,7 +91,7 @@ public class Menu {
 			} catch (NumberFormatException e) {
 				System.out.println();
 				System.out.println("*徒歩分数を数字で入力してください");
-				System.out.println("\n駅から徒歩何分ですか？(指定なしはEnter)");
+				System.out.println("\n駅から徒歩何分が希望ですか？(指定なしはEnter)");
 				System.out.print("> ");
 				walkMinutesInput = scan.nextLine();
 			}
@@ -111,7 +111,7 @@ public class Menu {
 		System.out.println("3. お気に入りを削除");
 		System.out.println("4. メニュー画面に戻る");
 		System.out.println();
-		System.out.println("番号を入力してください > ");
+		System.out.print("番号を入力してください > ");
 
 	}
 
@@ -139,7 +139,7 @@ public class Menu {
 				System.out.println("*お店のIDを数字で入力してください");
 				System.out.println();
 				System.out.println("お気に入りに追加したいお店のIDを入力してください");
-				System.out.println("> ");
+				System.out.print("> ");
 				idInput = scan.nextLine();
 			}
 		}
@@ -168,7 +168,7 @@ public class Menu {
 				System.out.println("お店のIDを数字で入力してください");
 				System.out.println();
 				System.out.println("お気に入りを削除したいお店のIDを入力してください");
-				System.out.println("> ");
+				System.out.print("> ");
 				idInput = scan.nextLine();
 			}
 		}
@@ -183,7 +183,7 @@ public class Menu {
 		System.out.println("2. 完全おまかせ");
 		System.out.println("3. メニュー画面に戻る");
 		System.out.println();
-		System.out.println("番号を入力してください > ");
+		System.out.print("番号を入力してください > ");
 	}
 
 	public void feelingMenu() {
@@ -197,6 +197,6 @@ public class Menu {
 		System.out.println("4. ちょっと贅沢したい");
 		System.out.println("5. 軽く済ませたい");
 		System.out.println();
-		System.out.println("番号を入力してください > ");
+		System.out.print("番号を入力してください > ");
 	}
 }
