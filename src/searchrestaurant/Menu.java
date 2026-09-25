@@ -24,8 +24,7 @@ public class Menu {
 		System.out.println("3. お気に入りを見る");
 		System.out.println("4. おすすめ！");
 		System.out.println("5. 終了する");
-		System.out.println();
-		System.out.print("番号を入力してください > ");
+		System.out.print("\n番号を入力してください > ");
 	}
 
 	public void searchMenu() {

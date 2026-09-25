@@ -29,6 +29,7 @@ public class Main {
 				System.out.println("=========================");
 				System.out.println("         お店検索");
 				System.out.println("=========================");
+				System.out.println();
 				menu.searchMenu();
 				break;
 
